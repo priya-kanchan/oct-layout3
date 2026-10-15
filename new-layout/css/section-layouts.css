@@ -1,0 +1,130 @@
+/* Reference building panorama and floor-plan selector. */
+:root{--cream:#f8f4eb;--dark:#10231e;--ink:#152c25;--gold:#a78343;--light-gold:#d8ba7c;--line:#e4d9c5;--text:#50584f;--surface:#fcf9f2;--section-space:clamp(34px,3.2vw,58px)}
+.price-list .residence-meta>strong{display:block;font-weight:500;white-space:nowrap}
+.price-list .residence-body .price-enquiry{display:block}
+.price-list .featured .residence-meta>strong{color:var(--light-gold)}
+.floor-plans{position:relative;isolation:isolate;padding:2.6vw 0 2.5vw;background:#f8f4eb;border-block:1px solid #e9e1d3}
+.floor-plans:after{content:'';position:absolute;inset:0 0 auto auto;width:13vw;height:15vw;background:url('../images/flower3.webp') top right/contain no-repeat;filter:sepia(1);opacity:.15;z-index:-1;pointer-events:none}
+.floorplan-layout{width:85%;display:grid;grid-template-columns:30% 44% 18%;gap:4%;align-items:center}
+.floorplan-copy .eyebrow{margin-bottom:1.15vw;font-size:.82vw;letter-spacing:.19em}
+.floorplan-copy h2{font-size:2.6vw;line-height:1.1;letter-spacing:-.045em;margin-bottom:1.3vw}
+.floorplan-copy>p{font-size:1.02vw;line-height:1.55;max-width:26vw;color:#4c514a;margin-bottom:1.8vw}
+.floorplan-tabs{display:grid;margin-bottom:1.2vw}
+.floorplan-tab{display:flex;align-items:center;justify-content:space-between;gap:10px;width:100%;padding:1.1vw 1.45vw;border:0;border-bottom:1px solid #e8dfce;background:transparent;text-align:left;font-size:.95vw;color:var(--ink);line-height:1.4}
+.floorplan-tab>span:first-child{text-transform:uppercase;font-weight:600;white-space:nowrap}
+.floorplan-tab>span:last-child{font-size:.9vw;color:#8a8578;white-space:nowrap}
+.floorplan-tab.is-active{background:#0b1b18;color:#fff;box-shadow:inset 0 0 0 2px #b1b4a9;border-color:transparent}
+.floorplan-tab.is-active>span:last-child{color:var(--light-gold)}
+.floorplan-brochure{font-size:1.05vw;letter-spacing:.01em;padding:.85vw 1.8vw;gap:1.4vw}
+.floorplan-preview{min-width:0}
+.floorplan-image{display:block;border:0;padding:0;background:transparent;width:100%;mix-blend-mode:multiply;cursor:zoom-in}
+.floorplan-crop{display:block;overflow:hidden;aspect-ratio:1.75;position:relative}
+.floorplan-crop img{width:112%;max-width:none;height:auto;transform:translate(-6%,-3%);mix-blend-mode:multiply}
+.floorplan-specification{background:#eee3cb;padding:1.2vw 1.1vw;margin-bottom:1vw}
+.floorplan-specification h3{font-size:2.7vw;line-height:1.05;letter-spacing:-.035em}
+.floorplan-specification>p{font:1.9vw/1.2 var(--serif);color:#6d5b36;margin:0 0 .9vw}
+.floorplan-specification>div{border-top:1px solid #dbcba9;padding-top:.8vw;font-size:1vw;line-height:1.35}
+.floorplan-specification>div span{display:block;color:#71694f}
+.floorplan-specification strong{font-weight:500;font-size:1.15vw}
+.floorplan-features{list-style:none;margin:0;padding:0;display:grid;gap:.85vw}
+.floorplan-features li{display:flex;align-items:center;gap:.8vw;font-size:.82vw;line-height:1.4}
+.floorplan-features li>span{display:grid;place-items:center;flex:0 0 2vw;width:2vw;height:2vw;border:1px solid #c4a66c;border-radius:50%}
+.floorplan-features img{width:1.15vw;height:1.15vw;object-fit:contain;filter:sepia(1)}
+.building-showcase{position:relative;isolation:isolate;overflow:hidden;min-height:37.7vw;background:#e7e1d4}
+.building-background,.building-fade{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;z-index:-2}
+.building-background{object-position:center}
+.building-fade{z-index:-1;background:linear-gradient(90deg,#f8f4eafa 0%,#f8f4eaf5 19%,#f8f4eadb 29%,#f8f4ea80 39%,#f8f4ea08 54%,transparent 64%)}
+.building-showcase:after{content:'';position:absolute;top:0;left:0;width:7vw;height:18vw;background:url('../images/flower1.webp') top left/contain no-repeat;opacity:.2;filter:sepia(1);pointer-events:none}
+.building-layout{width:84.5%;min-height:37.7vw;position:relative;padding:2.5vw 0 2vw}
+.building-copy{width:35vw}
+.building-copy>.eyebrow{font-size:.85vw;letter-spacing:.2em;margin-bottom:1.2vw}
+.building-copy h2{font-size:3.9vw;line-height:1.04;letter-spacing:-.045em;margin-bottom:1.7vw}
+.building-copy h2 em{white-space:nowrap}
+.building-copy>p{font-size:1.13vw;line-height:1.55;color:#4c514a;margin-bottom:1.4vw}
+.building-facts{border-top:2px solid #dfd0b3;padding-top:1.4vw;display:grid;grid-template-columns:.8fr .95fr 1.1fr 1.05fr;margin-bottom:2.3vw}
+.building-facts>div{padding:0 1.3vw;border-right:1px solid #d6c7a6;min-width:0}
+.building-facts>div:first-child{padding-left:0}.building-facts>div:last-child{border:0;padding-right:0}
+.building-facts strong{display:block;font:2.1vw/1.2 var(--serif);letter-spacing:-.04em;white-space:nowrap}
+.building-facts span{display:block;font-size:.78vw;line-height:1.4;margin-top:.45vw;color:#887551;white-space:nowrap}
+.building-explore{font-size:1.1vw;letter-spacing:.025em;padding:.85vw 2vw;gap:1.5vw}
+.building-film{position:absolute;right:-.5vw;bottom:6.2vw;display:flex;align-items:center;gap:1.2vw;padding:0;border:0;background:none;color:white;font-size:1.05vw;font-weight:600;text-shadow:0 1px 5px #000}
+.building-play{display:grid;place-items:center;width:5.3vw;height:5.3vw;border:2px solid #d4bb7b;border-radius:50%;background:#080d0be8;font-size:2.5vw;color:#e4d4a4;padding-left:.2vw;font-weight:400}
+@media(min-width:1800px){.floorplan-layout,.building-layout{max-width:1700px}}
+@media(min-width:621px) and (max-width:999px){
+ .floor-plans{padding:40px 0}.floorplan-layout{grid-template-columns:1fr 1.2fr;gap:30px;width:88%}.floorplan-copy .eyebrow{font-size:10px;margin-bottom:12px}.floorplan-copy h2{font-size:30px;margin-bottom:15px}.floorplan-copy>p{font-size:12px;max-width:none;margin-bottom:20px}.floorplan-tab{font-size:11px;padding:13px 10px}.floorplan-tab>span:last-child{font-size:10px}.floorplan-brochure{font-size:12px;padding:12px 17px;margin-top:12px}.floorplan-details{grid-column:1/-1;display:grid;grid-template-columns:1fr 2fr;gap:25px;align-items:center}.floorplan-specification{padding:18px;margin:0}.floorplan-specification h3{font-size:32px}.floorplan-specification>p{font-size:25px;margin-bottom:12px}.floorplan-specification>div{font-size:12px;padding-top:10px}.floorplan-specification strong{font-size:15px}.floorplan-features{grid-template-columns:1fr 1fr;gap:12px}.floorplan-features li{font-size:11px;gap:9px}.floorplan-features li>span{flex-basis:30px;width:30px;height:30px}.floorplan-features img{width:17px;height:17px}
+ .building-showcase,.building-layout{min-height:440px}.building-layout{padding:35px 0}.building-copy{width:47%}.building-copy>.eyebrow{font-size:10px;margin-bottom:16px}.building-copy h2{font-size:38px;margin-bottom:18px}.building-copy>p{font-size:12px;margin-bottom:20px}.building-fade{background:linear-gradient(90deg,#f8f4eafa,#f8f4eae8 35%,#f8f4ea30 65%,transparent)}.building-facts{padding-top:15px;margin-bottom:24px}.building-facts strong{font-size:22px}.building-facts span{font-size:8px;white-space:normal}.building-explore{font-size:12px;padding:12px 18px}.building-film{font-size:12px;bottom:55px;gap:12px}.building-play{width:58px;height:58px;font-size:30px}
+}
+@media(max-width:620px){
+ .floor-plans{padding:35px 0}.floor-plans:after{width:100px;height:130px}.floorplan-layout{width:88%;grid-template-columns:1fr;gap:25px}.floorplan-copy .eyebrow{font-size:10px;margin-bottom:14px}.floorplan-copy h2{font-size:33px;margin-bottom:16px}.floorplan-copy>p{font-size:13px;max-width:none;margin-bottom:22px}.floorplan-tabs{margin-bottom:20px}.floorplan-tab{padding:14px 15px;font-size:12px}.floorplan-tab>span:last-child{font-size:12px}.floorplan-brochure{font-size:12px;padding:12px 20px;gap:24px}.floorplan-preview{order:2}.floorplan-details{order:3;display:grid;grid-template-columns:1fr 1.25fr;gap:18px;align-items:start}.floorplan-specification{padding:18px 14px;margin:0}.floorplan-specification h3{font-size:30px}.floorplan-specification>p{font-size:25px;margin-bottom:14px}.floorplan-specification>div{font-size:11px;padding-top:12px}.floorplan-specification strong{font-size:14px}.floorplan-features{gap:12px}.floorplan-features li{font-size:10px;gap:8px}.floorplan-features li>span{flex-basis:27px;width:27px;height:27px}.floorplan-features img{width:15px;height:15px}
+ .building-showcase{min-height:0;padding-bottom:260px}.building-background{object-position:75% bottom}.building-fade{background:linear-gradient(180deg,#f8f4ea 0%,#f8f4eafa 40%,#f8f4eae8 56%,#f8f4ea44 76%,transparent 88%)}.building-showcase:after{width:65px;height:170px}.building-layout{width:88%;min-height:0;padding:35px 0 0}.building-copy{width:100%}.building-copy>.eyebrow{font-size:10px;letter-spacing:2px;margin-bottom:16px}.building-copy h2{font-size:40px;margin-bottom:20px}.building-copy>p{font-size:13px;margin-bottom:22px}.building-facts{padding-top:18px;margin-bottom:25px;grid-template-columns:.7fr .8fr 1fr 1.1fr}.building-facts>div{padding:0 10px}.building-facts strong{font-size:23px}.building-facts span{font-size:9px;margin-top:5px;white-space:normal}.building-explore{font-size:12px;padding:12px 20px;gap:22px}.building-film{right:0;bottom:-220px;font-size:12px;gap:12px}.building-play{width:58px;height:58px;font-size:31px}
+}
+@media(max-width:360px){.building-copy h2{font-size:35px}.building-facts strong{font-size:20px}.building-facts>div{padding-inline:7px}.floorplan-details{gap:12px}.floorplan-features li{font-size:9px;gap:6px}}
+@media(max-width:620px){.building-background{top:auto;bottom:0;height:300px;object-position:75% center}.building-fade{background:linear-gradient(180deg,#f8f4ea 0 calc(100% - 300px),#f8f4ea00 calc(100% - 240px),transparent 100%)}}
+
+/* Shared palette and section rhythm keep the original layouts together. */
+/* Keep the country list anchored to its modal input on desktop and mobile. */
+.enquiry-dialog .phone-field>.iti--container{
+ position:absolute!important;inset:calc(100% + 6px) 0 auto 0!important;
+ width:100%!important;height:auto!important;max-height:none!important;
+ margin:0!important;padding:0!important;z-index:25;transform:none!important;
+}
+.enquiry-dialog .phone-field>.iti--container .iti__country-list{
+ position:static;width:100%;max-width:none;height:auto;max-height:min(190px,28dvh);
+ margin:0;padding:5px 0;overflow-x:hidden;overflow-y:auto;overscroll-behavior:contain;
+ white-space:normal;background:var(--surface);color:var(--ink);
+ border:1px solid var(--line);border-radius:5px;box-shadow:0 6px 18px #10231e26;
+ font-size:12px;line-height:1.5;text-align:left;
+}
+.enquiry-dialog .iti__country{display:flex;align-items:center;gap:7px;padding:8px 10px}
+.enquiry-dialog .iti__flag-box,.enquiry-dialog .iti__country-name{margin-right:0}
+.enquiry-dialog .iti__country-name{flex:1;min-width:0}
+.enquiry-dialog .iti__dial-code{color:#817254;white-space:nowrap}
+.enquiry-dialog .iti__country.iti__highlight{background:#eee4d0}
+.enquiry-dialog .phone-field:has(.iti__country-list:not(.iti__hide)){z-index:25}
+.legal-disclaimer{margin-block:12px}
+.legal-disclaimer p{font-size:11px;line-height:1.7}
+.legal-disclaimer .legal-heading{font-size:12px;font-weight:600;color:#e8e2d5;margin-bottom:8px}
+.rera-qr{display:block;align-self:start;cursor:zoom-in}
+.legal .rera-qr img{width:100%;height:auto}
+#lightbox:has(img[src="images/rera-qr.webp"]){width:min(440px,92vw);padding:44px 24px 12px;background:white;color:var(--ink)}
+#lightbox:has(img[src="images/rera-qr.webp"]) img{width:100%;height:auto;max-height:70dvh;object-fit:contain;image-rendering:pixelated}
+.overview,.overview-copy,.amenities,.price-list,.floor-plans,.gallery,.location{background-color:var(--cream)}
+.amenities,.price-list,.floor-plans,.gallery,.highlights{padding-block:var(--section-space)}
+.highlights,.footer-bar,.legal{background-color:var(--dark)}
+.stats{background:radial-gradient(ellipse at 0 0,#b38a3d16,transparent 34%),var(--dark);border-color:#d8ba7c66}
+.residence-card,.enquiry-card,dialog{background-color:var(--surface)}
+.residence-card.featured{background-color:var(--dark);border-color:var(--gold)}
+.residence-card{border-color:var(--line);box-shadow:0 3px 12px #152c250a}
+.section-heading{margin-bottom:clamp(24px,2.2vw,34px)}
+.price-list .section-heading{margin-bottom:clamp(24px,2.2vw,34px)}
+.price-list .fine-print{margin-top:16px;font-size:10px;color:#73796e}
+.overview-copy p,.floorplan-copy>p,.building-copy>p,.location-copy>p{color:var(--text)}
+.floorplan-specification{background-color:#eee4d0}
+.floorplan-tab{border-color:var(--line)}
+.floorplan-tab.is-active{background-color:var(--dark);box-shadow:inset 0 0 0 1px #b99b62}
+.button.gold{background-color:var(--light-gold);border-color:var(--light-gold);color:var(--ink)}
+.button.gold:hover{background-color:#e3c990;border-color:#e3c990}
+.round-button{border-color:#c9ad77;color:var(--ink)}
+.hero .enquiry-card{background-color:var(--surface)}
+.hero .form-field,.enquiry-dialog .form-field,.contact .form-field{border-color:var(--line);box-shadow:none}
+.building-fade{background:linear-gradient(90deg,#f8f4ebfa 0%,#f8f4ebf5 19%,#f8f4ebdb 29%,#f8f4eb80 39%,#f8f4eb08 54%,transparent 64%)}
+@media(min-width:1000px){
+ .amenities>.wrap,.price-list>.wrap,.gallery>.wrap,.highlights>.wrap,.floorplan-layout,.building-layout{width:85%;max-width:none}
+ .overview-copy{padding-left:7.5vw;padding-top:var(--section-space);padding-bottom:var(--section-space)}
+}
+@media(min-width:621px) and (max-width:999px){.building-fade{background:linear-gradient(90deg,#f8f4ebfa,#f8f4ebe8 35%,#f8f4eb30 65%,transparent)}}
+@media(max-width:620px){
+ :root{--section-space:36px}
+ .legal .rera-qr{width:104px;max-width:100%;justify-self:center;padding:6px;background:white;box-sizing:border-box}
+ .legal .rera-qr img{display:block;width:100%;height:auto;aspect-ratio:1;object-fit:contain}
+ .hero{display:block;min-height:0;height:auto;padding:var(--header-height,72px) 0 var(--section-space);background:var(--dark)}
+ .hero-picture{position:relative;inset:auto;display:block;width:100%;height:auto;aspect-ratio:1.6}
+ .hero-picture img{width:100%;height:100%;object-fit:cover;object-position:center}
+ .hero-shade{display:none}
+ .hero-grid{padding-top:28px;gap:28px}
+ .overview-copy{padding-top:var(--section-space);padding-bottom:var(--section-space)}
+ .price-list .residence-track{padding-bottom:6px}
+ .floorplan-layout{gap:22px}
+ .building-fade{background:linear-gradient(180deg,#f8f4eb 0 calc(100% - 300px),#f8f4eb00 calc(100% - 240px),transparent 100%)}
+ .footer-bar{padding-block:24px}.legal{padding-top:16px}
+}
